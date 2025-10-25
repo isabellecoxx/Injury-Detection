@@ -33,17 +33,23 @@ function handleFile(event) {
   loading.style.display = "block";
   submitBtn.style.display = "none";
 
-  // Simulate processing time
+  // Ensure results are hidden first
+  results.classList.remove("show");
+
   setTimeout(() => {
     loading.style.display = "none";
-    results.style.display = "block";
 
-    // Fill results (mocked for demo)
+    // Fill results
     injuryEl.textContent = "Knee Scrape";
     proceduresEl.textContent = "Bandaid";
     pricingEl.textContent = "$2";
-  }, 2000); // 2 seconds loading
+
+    // Animate results
+    results.classList.add("show");
+  }, 2000);
 }
+
+
 
 uploadInput.addEventListener('change', handleFile);
 cameraInput.addEventListener('change', handleFile);
