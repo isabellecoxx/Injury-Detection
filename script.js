@@ -37,7 +37,6 @@ function handleFile(event) {
   if (file) {
     const imageURL = URL.createObjectURL(file);
     preview.src = imageURL;
-    output.textContent = "Image loaded successfully!";
   }
 }
 
