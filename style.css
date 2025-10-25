@@ -27,12 +27,20 @@ body {
 }
 
 .box-2 {
+  display: none;
   background-color: #bae6fd;
   border-radius: 12px;
   padding: 20px;
   width: 90%;               /* make boxes responsive */
   max-width: 400px;         /* typical iPhone width cap */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.box-2.show {
+  display: block;
+  opacity: 1;
 }
 
 .results{
@@ -130,4 +138,13 @@ button:hover {
   background-color: #f87171;
   color: white;
   margin-top: 15px;
+}
+#preview {
+  display: none; /* hide by default */
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px auto 0 auto; /* top margin + auto left/right */
+  border: 2px solid #2563eb;
 }
